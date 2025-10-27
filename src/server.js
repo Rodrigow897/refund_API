@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 app.use(express.json());
-
+app.use(cors());
 const requestRouter = require('../src/routes/requestRouter');
 
 app.get('/', (req, res) => {
